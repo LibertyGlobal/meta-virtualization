@@ -14,3 +14,4 @@ EXTRA_OEMAKE += "GODEBUG=1"
 
 PROVIDES += "virtual/containerd"
 RPROVIDES_${PN} = "virtual/containerd"
+RDEPENDS_${BPN} += " virtual/runc"

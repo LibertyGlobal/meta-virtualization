@@ -13,6 +13,7 @@ S = "${WORKDIR}/git/src/github.com/containerd/containerd"
 
 PROVIDES += "virtual/containerd"
 RPROVIDES_${PN} = "virtual/containerd"
+RDEPENDS_${BPN} += " virtual/runc"
 
 DEPENDS += "btrfs-tools"
 

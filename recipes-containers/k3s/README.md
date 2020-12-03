@@ -236,3 +236,21 @@ Events:
   Normal   NodeReady                10m                kubelet     Node qemux86-64 status is now: NodeReady
 
 ```shell
+
+
+
+
+
+
+
+
+root@qemux86-64:~# cp /var/lib/rancher/k3s/server/token .
+
+# dont do this. The wrapper has a bunch of cleanup that we don't want and it breaks flannel
+root@qemux86-64:~# k3s-agent -t ./token -s --server https://localhost:6443
+Job for k3s-agent.service failed because the control process exited with error code.
+See "systemctl status k3s-agent.service" and "journalctl -xe" for details.
+
+
+k3s agent -t /var/lib/rancher/k3s/server/token --server http://localhost:6443/
+
